@@ -13,7 +13,8 @@ notify_me.addEventListener('click', (e)=>{
         console.log('Valid')
         input.classList.remove('error-code');
         error.style.display = 'none';
-        return(true);
+        alert('Your email address has been received! 🎉')
+        location.reload();
     }
     else{
         console.log('Invalid')
