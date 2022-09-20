@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+
+:root{
+    --blue: hsl(223, 87%, 63%);
+    --pale-blue: hsl(223, 100%, 88%);
+    --light-red: hsl(354, 100%, 66%);
+    --gray: hsl(0, 0%, 59%);
+    --very-dark-blue: hsl(209, 33%, 12%);
+    --fw-thin: 300;
+    --fw-bold: 600;
+    --fw-x-bold: 700;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+button,
+input,
+html{
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+body{
+    padding: 5% 0 3%;
+}
+.container{
+    text-align: center;
+    padding: 0 30px;
+}
+.form-details img{
+    margin: 0 auto 50px;
+}
+.primary-heading{
+    color: var(--gray);
+    font-weight: var(--fw-thin);
+}
+.primary-heading strong{
+    color: rgb(0, 0, 0);
+}
+.sub-heading{
+    margin: 20px auto 25px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin-bottom: 60px;
+}
+.input{
+    display: flex;
+    flex-direction: column;
+}
+.input input{
+    color: rgb(0, 0, 0);
+    border: 1px solid var(--gray);
+    padding: 15px 30px;
+    border-radius: 40px;
+    transition: all .3s;
+}
+.input input.error-code{
+    outline: 1px solid var(--light-red);
+    border: none;
+}
+.input input:focus,
+.input input:focus{
+    outline: 1px solid var(--gray);
+}
+
+.input .error{
+    display: none;
+    margin: 5px 0 10px;
+    font-size: 12px;
+    color: var(--light-red);
+}
+
+form button{
+    padding: 15px 0;
+    border: none;
+    border-radius: 40px;
+    background: var(--blue);
+    color: rgb(100%, 100%, 100%);
+    box-shadow: 2px 5px 8px 1px var(--pale-blue);
+    margin: 10px 0 0;
+    cursor: pointer;
+    transition: all .3s;
+}
+form button:hover{
+    opacity: 70%;
+}
+
+.hero-img img{
+    max-width: 100%;
+}
+.hero-img{
+    margin-bottom: 80px;
+}
+
+.footer{
+    text-align: center;
+    object-fit: contain;
+}
+.footer-icons{
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+    list-style-type: none;
+}
+.footer-icons li{
+    margin: 0 5px;
+    border: 1px solid var(--gray);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer-icons li:hover{
+    background: var(--blue);
+    border: none;
+}
+.bi{
+    fill: var(--blue);
+    cursor: pointer;
+}
+.bi:hover{
+    fill: rgb(100%, 100%, 100%);
+}
+
+@media (min-width: 600px) {
+    form{
+        flex-direction: row;
+        justify-content: center;
+    }
+    .input{
+        max-width: 80%;
+    }
+    .input input{
+        width: 350px;
+    }
+    form button{
+        margin: 0 0 0 10px;
+        width: 150px;
+        height: 48px;
+    }
+
+
+    .hero-img img{
+        min-width: 55%;
+        max-width: 550px;
+    }
+}
+@media (max-width: 300px) {
+    .input input{
+        font-size: 10px;
+        padding: 15px 10px;
+    }
+}
