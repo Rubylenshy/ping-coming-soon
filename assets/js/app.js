@@ -10,14 +10,12 @@ notify_me.addEventListener('click', (e)=>{
     const emailRegex = /^([a-zA-Z0-9\._]+)@([a-zA-Z0-9]+)(\.[a-z]+)(\.[a-z]+)?$/;
     const error = document.querySelector('.error');
     if (emailRegex.test(input_value)) {
-        console.log('Valid')
         input.classList.remove('error-code');
         error.style.display = 'none';
         alert('Your email address has been received! 🎉')
         location.reload();
     }
     else{
-        console.log('Invalid')
         input.classList.add('error-code');
         error.style.display = 'block';
     }
